@@ -130,3 +130,6 @@ dmypy.json
 
 # Oanda credentials
 oanda.cfg
+
+# VS Code Workspace
+trading_bot.code-workspace
