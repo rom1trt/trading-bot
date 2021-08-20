@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use("seaborn")
 
-class SMABacktester():
-    
+class SMAStrategy():
+
     def __init__(self, ticker, start, end, SMA_short, SMA_long):
         self.ticker = ticker
         self.SMA_short = SMA_short
@@ -17,7 +17,7 @@ class SMABacktester():
         self.prepare_data()
 
     def __repr__(self):
-        return f"SMABacktester(ticker = {self.ticker} | SMA_short = {self.SMA_short} | SMA_long = {self.SMA_long} | start = {self.start} | end = {self.end})"
+        return f"SMA(ticker = {self.ticker} | SMA_short = {self.SMA_short} | SMA_long = {self.SMA_long} | start = {self.start} | end = {self.end})"
 
     def get_data(self):
         ''' Imports the data from the specified source
@@ -27,8 +27,8 @@ class SMABacktester():
         data = data.loc[self.start:self.end].copy()
         data.rename(columns = {self.ticker: "price"}, inplace = True)
         data["returns"] = np.log(data.price.div(data.price.shift(1)))
-        self.data = data 
-
+        self.data = data
+        #return data
     def prepare_data(self):
         ''' Prepares the data for SMA trading strategy backtesting
         '''
@@ -64,7 +64,7 @@ class SMABacktester():
         outperformance = performance - data["creturns"].iloc[-1] # out-/underperformance of strategy
         
         return round(performance, 6), round(outperformance, 6)
-    
+
     def plot_results(self):
         ''' Plots the performance of the SMA trading strategy and compares to "buy and hold".
         '''
@@ -74,7 +74,6 @@ class SMABacktester():
             title = f"{self.ticker} | SMA short = {self.SMA_short} | SMA long = {self.SMA_long}"
             self.results[["creturns", "cstrategy"]].plot(title = title, figsize = (12, 8))     
 
-    
     def optimize_parameters(self, SMA_short_range, SMA_long_range):
         ''' Finds the optimal strategy given the SMA parameters.
 
@@ -91,7 +90,7 @@ class SMABacktester():
         for combination in combinations:
             self.set_parameters(combination[0], combination[1])
             results.append(self.test_strategy()[0])
-        
+
         best_performance = np.max(results) # best performance
         optimal_parameters = combinations[np.argmax(results)] # optimal parameters
         

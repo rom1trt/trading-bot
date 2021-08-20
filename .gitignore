@@ -133,3 +133,5 @@ oanda.cfg
 
 # VS Code Workspace
 trading_bot.code-workspace
+
+FinancialInstrument.py
