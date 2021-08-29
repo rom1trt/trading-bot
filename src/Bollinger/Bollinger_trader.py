@@ -177,26 +177,3 @@ class BollingerTrader(tpqoa.tpqoa):
         Cum P&L = {}".format(time, units, price, pl, cumpl)
               )
         print(150 * "-" + "\n")
-
-
-if __name__ == "__main__":
-
-    bollinger_trader = BollingerTrader(
-        "/Users/romain/trading-bot/oanda.cfg",
-        "EUR_USD",
-        "1min",
-        SMA=50,
-        dev=2,
-        units=100000
-    )
-    bollinger_trader.get_most_recent()
-    bollinger_trader.stream_data(bollinger_trader.instrument, stop=100)
-    if bollinger_trader.position != 0:
-        close_order = bollinger_trader.create_order(
-            bollinger_trader.instrument,
-            units=-bollinger_trader.position * bollinger_trader.units,
-            suppress=True,
-            ret=True
-        )
-        bollinger_trader.report_trade(close_order, "GOING NEUTRAL")
-        bollinger_trader.position = 0
