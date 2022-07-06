@@ -53,8 +53,6 @@ You may also suggest changes by forking this repo and creating a pull request or
 A list of commonly used resources that I found helpful.
 
 ### Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python Finance (Datacamp)](https://www.datacamp.com/community/tutorials/finance-python-trading)
 * [Jupyter Notebook](https://jupyter.org/documentation)
 * [Anaconda](https://www.anaconda.com/)
