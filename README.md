@@ -36,6 +36,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#disclaimer">Disclaimer</a></li>
   </ol>
 </details>
 
@@ -53,11 +54,9 @@ You may also suggest changes by forking this repo and creating a pull request or
 A list of commonly used resources that I found helpful.
 
 ### Built With
-* [Python Finance (Datacamp)](https://www.datacamp.com/community/tutorials/finance-python-trading)
-* [Jupyter Notebook](https://jupyter.org/documentation)
-* [Anaconda](https://www.anaconda.com/)
-* [Youtube](https://www.youtube.com)
-
+* [![Jupyter Notebook](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/)
+* [![Anaconda](https://img.shields.io/badge/anaconda-darkgreen?style=for-the-badge&logo=anaconda)](https://www.anaconda.com/)
+* [![Python](https://img.shields.io/badge/python-a8a300?style=for-the-badge&logo=python)](https://www.python.org/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -92,7 +91,7 @@ To get a local copy up and running follow these simple example steps.
  7. Rename the `oanda.cfg.example.cfg` to `oanda.cfg`
  8. Run the `main.py` file with the strategy you wish 
 
-## DISCLAIMER
+### DISCLAIMER
 
     I am not responsible for anything done with this bot.
     You use it at your own risk.
