@@ -46,7 +46,6 @@
 
 Being passionate about financial markets, I decided to create a bot for putting 'virtual' money in work through few strategies and test the efficiency of each one. 
 I picked 2 technical analysis tools that I usually use to manually study trading patterns: the Moving Average and Bollinger-bands.
-Additionally, I created a strategy based on Machine Learning and more specifically on Logistic Regression.
 
 The bot is specifically tailored for some specific strategies. I'll be adding more in the near future. 
 You may also suggest changes by forking this repo and creating a pull request or opening an issue.
